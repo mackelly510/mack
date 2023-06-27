@@ -1,0 +1,317 @@
+<?php 
+     $server="localhost";
+     $urs = "root";
+     $password="";
+     $db = "user";
+
+     $Connection = mysqli_connect($server, $urs, $password, $db);
+     if (!$Connection) {
+         die("connection failed". mysqli_connect_error());
+     }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/Extra_Css/css/all.css">
+    <link rel="stylesheet" href="css/Dashboard.css">
+    <title>Dashboard</title>
+    
+    
+</head>
+<body>
+  <div class="Dashboard">
+    <div class="Horizontal-bar">
+      <div class="horizontal-bar-item">
+          <div><i  id="menu_button" class="fa-solid fa-bars">
+            
+          </i></div>
+          <div><input type="text" class="search" id="search" >
+            <i  id = search-btn class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </div>
+          <div>profile</div>
+      </div>
+  </div>
+          
+      
+      
+        <div class="Dashboard-items">
+       <div  id ="menu">
+          <div class="left-side">
+              <div class="left-side-content">
+                  
+                      <a href="#" class="Active"><i class="fa-sharp fa-solid fa-compass fa-2xl"></i>Dashboard
+                          <a href="#" id="dropbtn"   class="mack"><i class="fa-solid fa-circle-plus  fa-xl" ></i>Users
+                              <i class="fa-solid fa-caret-down" style="padding-left: 95px "></i></a>
+                          <div class="drop" id="drop">
+                              <a href="Student.php" >Add Student </a>
+                              <a href="Employee.php">Add Employee </a>
+                              <a href="Users.php">All Users</a>
+                               
+                               
+                           </div>
+                                 
+                          <a href="#"  id="dropbtn1"  class="mack"><i class="fa-solid fa-chart-column  fa-xl" ></i>Statistics
+                              <i class="fa-solid fa-caret-down" style="padding-left: 67px;"></i></a>
+                          <div class="drop" id="drop1">
+                             
+                               <a href="#">Current Statistics</a>
+                               <a href="#">Past Statistics </a>
+                               
+                           </div>
+                              
+                              
+                          <a href="#"  id="dropbtn2" class="mack"><i class="fa-solid fa-user fa-xl" ></i>Account
+                              <i  class="fa-solid fa-caret-down" 
+                              style="padding-left: 75px;"></i></a>
+                          <div class="drop" id="drop2">
+                              <a href="#">New User </a>
+                               <a href="#">All User </a>
+                               <a href="#">Profile </a>
+                               
+                          </div>
+                           
+                             
+                             
+                          <a href="#" id="dropbtn3"><i class="fa-solid fa-building-user fa-xl"></i>Administartion
+                          <i  class="fa-solid fa-caret-down" style="padding-left: 10px;"></i></a>
+                          <div class="drop" id="drop3">
+                          <a href="Faculty.php">Add Faculty</a>
+                          <a href="Department.php">Add Department </a>
+                          <a href="Course.php">Add Courses</a>
+                  
+                             
+                               
+                  </div></div>
+                </div></div>
+         
+
+                    <div class="Dashboard_Content">
+                      <div class="content">
+                        <div class="top-content">
+                          <div class="top-content-items">
+                           <div class="top-content-items-title">25 Users <br>Where Added Today</div>
+                            <div class="top-content-items-icon"><i class="fa-solid fa-user fa-xl" 
+                              style="font-size:80px; 
+                                    
+                              padding: 20px;
+                              cursor: pointer; 
+                              margin-top: -20px;
+                              border-radius:100px; 
+                              "></i></i></div>
+                          </div>
+                          <div class="top-content-items">
+                            <div class="top-content-items-title">2 Faculties<br> &<br> 5 Department Recently Added</div>
+                            <div class="top-content-items-icon"><i class="fa-solid fa-building-user fa-xl" 
+                              style="font-size:80px; 
+                                    
+                              padding: 20px;
+                              cursor: pointer; 
+                              margin-top: -20px;
+                              border-radius:100px; 
+                              "></i></i></div>
+                          </div>
+                          <div class="top-content-items">
+                            <div class="top-content-items-title">2 Faculties<br> &<br> 5 Department Recently Added</div>
+                            <div class="top-content-items-icon"><i class="fa-solid fa-building-user fa-xl" 
+                              style="font-size:80px; 
+                                    
+                              padding: 20px;
+                              cursor: pointer; 
+                              margin-top: -20px;
+                              border-radius:100px; 
+                              "></i></i></div>
+                          </div>
+                          
+                           
+                      </div>
+                      </div>
+                        <div class="table">
+                          <div class="Table-Title">Users Recently Recorded</div>
+                         
+                            <table class="Table">
+                              <thead>
+                                <tr>
+                                  <th>Firstname</th>
+                                  <th>Lastname</th>
+                                  <th>DateOfBirth</th>
+                                  <th>Email</th>
+                                  <th>Gender</th>
+                                  <th>UserStatus</th>
+                                  
+                                </tr>
+                              </thead>
+                                <tbody>
+                                  
+                                  <tr>
+                                    <td>Mackelly</td>
+                                    <td>Fokou</td>
+                                    <td>2023-06-07</td>
+                                    <td>titaatmackelly78@mail.com</td>
+                                    <td>Male</td>
+                                    <td>Employee</td>
+                                  
+                                  </tr>
+                                  <tr>
+                                    <td>Mack</td>
+                                    <td>Elly</td>
+                                    <td>2023-07-07</td>
+                                    <td>mackelly68@mail.com</td>
+                                    <td>Male</td>
+                                    <td>Student</td>
+                                  
+                                  </tr>
+                                  <tr>
+                                    <td>Deo</td>
+                                    <td>John</td>
+                                    <td>2023-06-07</td>
+                                    <td>DeoJohn28@mail.com</td>
+                                    <td>Male</td>
+                                    <td>Employee</td>
+                                  
+                                  </tr>
+                                   <tr>
+                                    <td>kelly</td>
+                                    <td>Lilian</td>
+                                    <td>2023-06-07</td>
+                                    <td>Liliana68@mail.com</td>
+                                    <td>Female</td>
+                                    <td>Student</td>
+                                  
+                                  </tr>
+                                  <tr>
+                                    <td>Toh</td>
+                                    <td>Jordan</td>
+                                    <td>2023-06-07</td>
+                                    <td>tohjordan18@mail.com</td>
+                                    <td>Male</td>
+                                    <td>Employee</td>
+                                  
+                                  </tr>
+                                  
+
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="Middle-Title">WELCOME TO MSCCR</div>
+                          <div class="Bottom-content">
+                            <div class="Bottom-content-items">
+                              <div class="title">List of Student</div>
+                              <div class="Middle"><i  class="fa-solid fa-table  fa-xl"
+                                style="font-size:80px; 
+                                       padding: 20px;
+                                        cursor: pointer; 
+                                        border:1px ;
+                                        margin-top: -20px;
+                                        border-radius:100px; 
+                                        color:black"></i></div>
+                              <div class="Link" ><a href="../Page/Student.php"></a>Check It Out</div>
+                            </div>
+                            <div class="Bottom-content-items">
+                              <div class="title">List of Employees</div>
+                              <div class="Middle"><i class="fa-solid fa-chart-column  fa-xl" 
+                                style="font-size:80px; 
+                                    
+                                        padding: 20px;
+                                        cursor: pointer; 
+                                        margin-top: -20px;
+                                        border-radius:100px; 
+                                        color:black"></i></div>
+                              <div class="Link">Check It Out</div>
+                            </div>
+                            <div class="Bottom-content-items">
+                              <div class="title">Administration</div>
+                              <div class="Middle"><i class="fa-solid fa-chart-column  fa-xl" 
+                                style="font-size:80px; 
+                                        padding: 20px;
+                                        cursor: pointer; 
+                                        color:black"></i></div>
+                              <div class="Link">Visit It</div>
+                            </div>
+                            <div class="Bottom-content-items">
+                              <div class="title">Profile</div>
+                              <div class="Middle"><i class="fa-solid fa-chart-column  fa-xl"
+                                style="font-size:80px; 
+                                 
+                                        padding: 20px;
+                                        cursor: pointer; 
+                                        margin-top: -20px;
+                                        border-radius:100px; 
+                                        color:black"></i></div>
+                              <div class="Link">Check It Out</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+      </div>
+        </div>
+  </div>
+  </body>
+     
+                  <div class="footer">
+                    
+                     © 2023, made by Msck.
+                  </div>
+</html>v
+      
+     
+      <script src="js/jquery.js"></script>
+<script>
+  $(document).ready(function(){
+$("#menu_button").click(function(){
+  $("#menu").toggle();
+});
+});
+
+$(document).ready(function(){
+$("#dropbtn").click(function(){
+  $("#drop").toggle();
+});
+
+});
+$(document).ready(function(){
+$("#dropbtn1").click(function(){
+  $("#drop1").toggle();
+});
+
+});
+
+$(document).ready(function(){
+$("#dropbtn2").click(function(){
+  $("#drop2").toggle();
+});
+
+});
+$(document).ready(function(){
+$("#dropbtn3").click(function(){
+  $("#drop3").toggle();
+});
+
+});
+$(document).ready(function(){
+$("#search-btn").click(function(){
+  $("#search").toggle();
+});
+
+});
+
+
+//phone Dropdown //
+
+
+
+
+
+</script>
+      </script>
+          </body>
+          
+          
+  
+</html>
+  </div>
+    
+    
